@@ -1,0 +1,16 @@
+/*fuentes desde google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap');
+
+:root{
+    --light-gray:#2b3032a1;
+    --primary-color: #45ccb8;
+    --border: #2b303218;
+    --text-color: #ff686b;
+    --roboto: "Roboyo", sans-serif;
+    --gugi: "Gugi", cursive;
+    --sofia: "Sofia", cursive;
+}
+
+.primary-color{
+    color: var(--primary-color);
+}
