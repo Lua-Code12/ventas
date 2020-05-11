@@ -153,13 +153,13 @@ header .site-title{
     height: 30%;
 }
 
-.site-slider-two .producto{
+.site-slider-two .product{
     height: 25rem;
     position: relative;
     overflow: hidden;
 }
 
-.site-slider-two .producto img{
+.site-slider-two .product img{
     width: 90%;
     margin: auto;
 
@@ -170,5 +170,56 @@ header .site-title{
     border-radius: 4rem;
     border: 1px solid var(--border);
     background-color: white;
+    color: var(--light-gray);
     
+}
+
+.slider-two .slick-track .product:hover span{
+    background-color: var(--primary-color);
+}
+
+.hr{
+    border: 1px dotted var(--border);
+}
+
+/*Seccion de caracteristicas*/
+
+.container .features{
+    padding: 3rem 0;
+}
+
+.container .features h1{
+    font-family: var(--gugi);
+}
+
+.container . .features p{
+    padding: 0.5% 25%;
+    font-size: 0.9em;
+
+}
+
+/*Slider3*/
+
+.site-slider-three{
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.site-slider-three .product{
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.rating i{
+    font-size: 0.7rem;
+    color: lightblue;
+}
+
+.site-slider-three .pro-price span{
+    color: var(--text-color);
+}
+
+.product.cart .slider-btn:hover {
+    background: var(--primary-color);
+    color: white;
 }
