@@ -144,3 +144,31 @@ header .site-title{
     transform: scale(2.5);
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.205);
 }
+
+
+/*slider 2*/
+
+.site-slider-two{
+    position: relative;
+    height: 30%;
+}
+
+.site-slider-two .producto{
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-slider-two .producto img{
+    width: 90%;
+    margin: auto;
+
+}
+
+.site-btn.btn-span{
+    padding: 0.8rem 1.9rem;
+    border-radius: 4rem;
+    border: 1px solid var(--border);
+    background-color: white;
+    
+}
