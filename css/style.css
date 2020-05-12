@@ -223,3 +223,31 @@ header .site-title{
     background: var(--primary-color);
     color: white;
 }
+
+.site-info{
+    margin-top: 10rem;
+}
+
+
+/*Footer*/
+
+footer h4{
+    padding: 4rem 1rem 0;
+    font-family: var(--roboto);
+}
+
+footer .social i{
+    padding: 3% 1%;
+}
+
+footer .col-md-2 small{
+    color: var(--light-gray);
+    padding: 0.7em 0;
+}
+
+footer .follow-us div{
+    width: 33%;
+    height: 8rem;
+    background: lightblue;
+
+}
