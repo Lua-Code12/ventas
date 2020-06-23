@@ -35,3 +35,17 @@ $(".slider-three")
     autoplaySpeed: 3000,
     infinite: false
 });
+
+
+/**Cuarto slider**/
+
+$(".slider-four")
+    .not(".slick-intialized")
+    .slick({
+    preArrow: ".site-slider-four .prev",
+    nextArrow: ".site-slider-four .next",
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplaySpeed: 3000,
+    infinite: false
+});
