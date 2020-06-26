@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <title>VENTAS ONLINE</title>
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-12 col-20">
+                    <div class="btn-group"> <button class="btn border dropdown-toggle my-md-4 my-2 text-white" 
+                        data-toggle="dropdown" 
+                        aria-haspopup="true"
+                        aria-expanded="false">CL</button>
+    
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">USA - USD</a>
+                        </div>
+                    </div>
+                   
+                </div>
+                
+                <div class="col-md-4 col-12 text-center">
+                    <h2 class="my-md-3 site title text-white">VENTAS ONLINE</h2>
+                </div>
+                <div class="col-md-4 col-12 text-right">
+                    <p class="my-md-4 header-links">
+                        <a href="./login.html" class="px-2">Ingresar</a>
+                        <a href="./formulario.html" class="px-1">Crear Cuenta</a> 
+                    </p>
+                </div>
+
+            </div>             
+            
+        </div>
+
+
+
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                
+                <button class="navbar-toggler" 
+                type="button" data-toggle="collapse" 
+                data-target="#navbarNav" 
+                aria-controls="navbarNav" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="./index.html">INICIO <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./catalogo.html">CATÁLOGO</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">CONDICIONES DE DESPACHO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">OFERTAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NOSOTROS</a>
+                    </li>
+                   
+                  </ul>
+                </div>
+
+    </header>
+
+    <br>
+
+    <main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+                    <form id="procesar-pago" action="#" method="post">
+                        <div class="form-group row">
+                            <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="cliente"
+                                    placeholder="Ingresa nombre cliente" name="destinatario">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="correo" placeholder="Ingresa tu correo" name="cc_to">
+                            </div>
+                        </div>
+
+                        <div id="carrito" class="form-group table-responsive" >
+                            <table class="table" id="lista-compra" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Sub Total</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody >
+
+                                </tbody>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                    <th scope="col">
+                                        <p id="subtotal"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">IGV :</th>
+                                    <th scope="col">
+                                        <p id="igv"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                    <th scope="col">
+                                        <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-center" id="loaders">
+                            <img id="cargando" src="./imagenes/imgcatalogo/cargando.gif" width="220">
+                        </div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-4 mb-2">
+                                <a href="catalogo.html" class="btn btn-info btn-block">Seguir comprando</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <button href="#" class="btn btn-success btn-block" id="procesar-compra">Realizar compra</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+                <!---Facilites-->
+            
+                <div class="container-fluid p-0">
+                    <div class="site-info">
+                        <div class="row text center py-3 bg-primary-color m-0">
+                            <div class="col-md-4 col-sm-12 my-md-0 my-4">
+                                <div class="row justify-content-center text-light">
+                                    <i class="fas fa-rocket fa-4x px-4"></i>
+                                    <div class="py-2 font-roboto text-left">
+                                        <h6 class="m-0">Despacho gratis a domicilio</h6>
+                                        <small>Por compras sobre $150.000</small>
+                                    </div>
+                                </div>
+                            </div>  
+                                
+                                    <div class="col-md-4 col-sm-12 my-md-0 my-4">
+                                        <div class="row justify-content-center text-light">
+                                            <i class="fas fa-hand-holding-usd fa-4x px-4"></i>
+                                            <div class="py-2 font-roboto text-left">
+                                                <h6 class="m-0">Compra garantizada</h6>
+                                                <small>Garantía de devolución por 30 días</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+        
+        
+                                
+                                    <div class="col-md-4 col-sm-12 my-md-0 my-4">
+                                        <div class="row justify-content-center text-light">
+                                            <i class="fas fa-headphones-alt fa-4x px-4"></i>
+                                            <div class="py-2 font-roboto text-left">
+                                                <h6 class="m-0">Soporte online</h6>
+                                                <small>Desde las 9:30 am a 16:00 pm</small>
+                                            </div>
+                                        </div>
+                                   </div>
+                               
+                   
+                        </div>
+                    </div>
+                </div>
+        
+    </main>
+        <!--/main-->
+        
+        
+        
+        <!--footer-->
+            <footer>
+                <div class="conntainer-fluid px-5">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <h4>Contactos</h4>
+                            <div class="row pl-md-1 text-secondary">
+                                <div class="col-12">
+                                    <i class="fa fa-home px-md-2"></i>
+                                    <smal>Álvarez 2336, Viña del Mar, Valparaíso</smal>
+                                </div>
+                                <div class="col-12">
+                                    <i class="fa fa-paper-plane px-md-2"></i>
+                                    <smal>www.ventasonline.cl</smal>
+                                </div>
+                                <div class="col-12">
+                                    <i class="fa fa-phone-volume px-md-2"></i>
+                                    <smal>(+56)977885540</smal>
+                                </div>
+                            </div>
+                            <div class="row social text-secondary">
+                                <div class="col-12 py-3">
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-facebook-f"></i>
+                                    <i class="fab fa-google-plus-g"></i>
+                                    <i class="fab fa-skype"></i>
+                                    <i class="fab fa-pinterest-p"></i>
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <h4>Nuestros Locales</h4>
+                            <div class="d-flex flex-column">
+                                <small class="pt-0">Viña del Mar</small>
+                                <small class="pt-0">Santiago</small>
+                                <small class="pt-0">Concepción</small>
+                                <small class="pt-0">Puerto Montt</small>
+                            </div>
+        
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <h4>Extras</h4>
+                            <div class="d-flex flex-column">
+                                <small class="pt-0">Nosotros</small>
+                                <small class="pt-0">Contacto</small>
+                                <small class="pt-0">Ultimas liquidaciones</small>
+                                <small class="pt-0">Site map</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 follow-us col-sm-12">
+                            <h4>Siguenos en Instagram</h4>
+                            <div class="d-flex flex-row">
+                                <img src="./imagenes/imagenes4/amd.png" alt="Imstagram1" class="img-fluid">
+                                <img src="./imagenes/imagenes4/intel.png" alt="Imstagram2" class="img-fluid">
+                                <img src="./imagenes/imagenes4/personac.png" alt="Imstagram3" class="img-fluid">
+                            </div>
+                            <div class="d-flex flex-row">
+                                <img src="./imagenes/imagenes4/personap.png" alt="Imstagram4" class="img-fluid">
+                                <img src="./imagenes/imagenes4/play.png" alt="Imstagram5" class="img-fluid">
+                                <img src="./imagenes/imagenes4/xbox.png" alt="Imstagram6" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+        
+        
+        
+            </footer>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/sweetalert2.min.js"></script>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
+    <script src="./js/carrito.js"></script>
+    <script src="./js/compra.js"></script>
+
+
+</body>
+
+</html>
