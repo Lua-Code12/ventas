@@ -32,7 +32,8 @@
 
 <!--header-->
     <header>
-        <div class="container">
+        
+         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12 col-12 col-20">
                     <div class="btn-group"> <button class="btn border dropdown-toggle my-md-4 my-2 text-white" 
@@ -52,8 +53,8 @@
                 </div>
                 <div class="col-md-4 col-12 text-right">
                     <p class="my-md-4 header-links">
-                        <a href="#" class="px-2">Ingresar</a>
-                        <a href="#" class="px-1">Crear Cuenta</a> 
+                        <a href="./login.html" class="px-2">Ingresar</a>
+                        <a href="./formulario.html" class="px-1">Crear Cuenta</a> 
                     </p>
                 </div>
 
@@ -78,16 +79,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="./index.html">INICIO <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">FEATURES</a>
+                      <a class="nav-link" href="./catalogo.html">CATÁLOGO</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">COLLECTION</a>
+                      <a class="nav-link" href="#">CONDICIONES DE DESPACHO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SHOP</a>
+                        <a class="nav-link" href="#">OFERTAS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">NOSOTROS</a>
@@ -96,16 +97,41 @@
                   </ul>
                 </div>
 
-                <div class="navbar-nav">
-                    <li class="nav-item border rounded-circle mx-2 search-icon">
-                        <i class="fas fa-search p-2"></i>
-                    </li>
-                    <li class="nav-item border rounded-circle mx-2 basket-icon">
-                        <i class="fas fa-shopping-basket p-2"></i>
-                    </li>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse right">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <img src="./imagenes/imgcatalogo/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"></img>
+                            <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                <table id="lista-carrito" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+
+                                <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                    Compra</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
+
+
+
+
               </nav>
+
+
 
         </div>
 
@@ -122,11 +148,11 @@
             <h3>
                  Crear aquí tu cuenta.
             </h3>
-            <input type="text" name="nombre" placeholder="Nombre Completo" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
-            <input type="text" id="rut" name='rut' placeholder="Ingresa tu rut" onblur="validarRut(this) " minlength="9" maxlength="10" required>
-            <input type="text" name="telefono" placeholder="Teléfono de contacto" required>
+            <input type="text" name="nombre" placeholder="Nombre" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
+            <input type="text" name="Apellido" placeholder="Apellido" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
+            <input type="text" name="direccion" placeholder="Dirección domicilio " required>
             <input type="email" name="mail" placeholder="Correo electrónico" required>
-            <input type="date" name="fecha_nacimiento" required>
+            <input type="password" name="pass" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" placeholder="Cree una contraseña usando mayusculas, minusculas, números" required></p>
             <select id="regiones" size="1" required>
     
             </select>
@@ -137,13 +163,131 @@
     
         </form>
 
+
+
+        
+        <div class="container-fluid p-0">
+            <div class="site-info">
+                <div class="row text center py-3 bg-primary-color m-0">
+                    <div class="col-md-4 col-sm-12 my-md-0 my-4">
+                        <div class="row justify-content-center text-light">
+                            <i class="fas fa-rocket fa-4x px-4"></i>
+                            <div class="py-2 font-roboto text-left">
+                                <h6 class="m-0">Despacho gratis a domicilio</h6>
+                                <small>Por compras sobre $150.000</small>
+                            </div>
+                        </div>
+                    </div>  
+                        
+                            <div class="col-md-4 col-sm-12 my-md-0 my-4">
+                                <div class="row justify-content-center text-light">
+                                    <i class="fas fa-hand-holding-usd fa-4x px-4"></i>
+                                    <div class="py-2 font-roboto text-left">
+                                        <h6 class="m-0">Compra garantizada</h6>
+                                        <small>Garantía de devolución por 30 días</small>
+                                    </div>
+                                </div>
+                            </div>
+                        
+
+
+                        
+                            <div class="col-md-4 col-sm-12 my-md-0 my-4">
+                                <div class="row justify-content-center text-light">
+                                    <i class="fas fa-headphones-alt fa-4x px-4"></i>
+                                    <div class="py-2 font-roboto text-left">
+                                        <h6 class="m-0">Soporte online</h6>
+                                        <small>Desde las 9:30 am a 16:00 pm</small>
+                                    </div>
+                                </div>
+                           </div>
+                       
+           
+                </div>
+            </div>
+        </div>
+
+
+
+
     </main>
 <!--/main-->
 
 
 
 <!--footer-->
-    <footer></footer>
+    <footer>
+    
+        <div class="conntainer-fluid px-5">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h4>Contactos</h4>
+                    <div class="row pl-md-1 text-secondary">
+                        <div class="col-12">
+                            <i class="fa fa-home px-md-2"></i>
+                            <smal>Álvarez 2336, Viña del Mar, Valparaíso</smal>
+                        </div>
+                        <div class="col-12">
+                            <i class="fa fa-paper-plane px-md-2"></i>
+                            <smal>www.ventasonline.cl</smal>
+                        </div>
+                        <div class="col-12">
+                            <i class="fa fa-phone-volume px-md-2"></i>
+                            <smal>(+56)977885540</smal>
+                        </div>
+                    </div>
+                    <div class="row social text-secondary">
+                        <div class="col-12 py-3">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-google-plus-g"></i>
+                            <i class="fab fa-skype"></i>
+                            <i class="fab fa-pinterest-p"></i>
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <h4>Nuestros Locales</h4>
+                    <div class="d-flex flex-column">
+                        <small class="pt-0">Viña del Mar</small>
+                        <small class="pt-0">Santiago</small>
+                        <small class="pt-0">Concepción</small>
+                        <small class="pt-0">Puerto Montt</small>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <h4>Extras</h4>
+                    <div class="d-flex flex-column">
+                        <small class="pt-0">Nosotros</small>
+                        <small class="pt-0">Contacto</small>
+                        <small class="pt-0">Ultimas liquidaciones</small>
+                        <small class="pt-0">Site map</small>
+                    </div>
+                </div>
+                <div class="col-md-4 follow-us col-sm-12">
+                    <h4>Siguenos en Instagram</h4>
+                    <div class="d-flex flex-row">
+                        <img src="./imagenes/imagenes4/amd.png" alt="Imstagram1" class="img-fluid">
+                        <img src="./imagenes/imagenes4/intel.png" alt="Imstagram2" class="img-fluid">
+                        <img src="./imagenes/imagenes4/personac.png" alt="Imstagram3" class="img-fluid">
+                    </div>
+                    <div class="d-flex flex-row">
+                        <img src="./imagenes/imagenes4/personap.png" alt="Imstagram4" class="img-fluid">
+                        <img src="./imagenes/imagenes4/play.png" alt="Imstagram5" class="img-fluid">
+                        <img src="./imagenes/imagenes4/xbox.png" alt="Imstagram6" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+    </footer>
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
