@@ -149,17 +149,14 @@
                 <h3>
                      Crear aquí tu cuenta.
                 </h3>
-                <input type="text" name="nombre" placeholder="Nombre" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
-                <input type="text" name="Apellido" placeholder="Apellido" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
-                <input type="text" name="direccion" placeholder="Dirección domicilio " required>
-                <input type="email" name="mail" placeholder="Correo electrónico" required>
-                <input type="password" name="pass" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" placeholder="Cree una contraseña usando mayusculas, minusculas, números" required></p>
-                <select id="regiones" size="1" required>
-        
-                </select>
-                <select id="comunas" size="1" required>
-        
-                </select>
+                <input type="text" id="username" placeholder="Nombre" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
+                <input type="text" id="family_name" placeholder="Apellido" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
+                <input type="text" id="nombreUsuario" placeholder="Nombre Usuario" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
+                <input type="text" id="direccion" placeholder="Dirección domicilio " required>
+                <input type="email" id="mail" placeholder="Correo electrónico" required>
+                <input type="password" id="pass" placeholder="Cree una contraseña usando mayusculas, minusculas, números" required>
+                <input type="text" id="comuna" placeholder="Ingrese comuna" required></input>
+
                 <input type="submit" value="ENVIAR" id="boton">
         
             </form>
@@ -299,7 +296,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/form.js"></script>
-    <script src="./js/region_comuna.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="./js/formulario.js"></script>
 </body>
 </html>

@@ -14,10 +14,10 @@ class Carrito {
     //Leer datos del producto
     leerDatosProducto(producto){
         const infoProducto = {
-            imagen : producto.querySelector('img').src,
-            titulo: producto.querySelector('h4').textContent,
-            precio: producto.querySelector('.precio span').textContent,
             id: producto.querySelector('a').getAttribute('data-id'),
+            marca: producto.querySelector('td.marc').textContent,
+            modelo: producto.querySelector('td.model').textContent,
+            precio: producto.querySelector('td.price').textContent,
             cantidad: 1
         }
         let productosLS;
@@ -47,14 +47,12 @@ class Carrito {
     insertarCarrito(producto){
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>
-                <img src="${producto.imagen}" width=100>
-            </td>
-            <td>${producto.titulo}</td>
+            <td>${producto.marca}</td>
+            <td>${producto.modelo}</td>
             <td>${producto.precio}</td>
-            <td>
-                <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
-            </td>
+            <td class="borrar">
+                <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"</a>
+            </td>      
         `;
         listaProductos.appendChild(row);
         this.guardarProductosLocalStorage(producto);
@@ -119,14 +117,12 @@ class Carrito {
             //Construir plantilla
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>
-                    <img src="${producto.imagen}" width=100>
-                </td>
-                <td>${producto.titulo}</td>
+                <td>${producto.marca}</td>
+                <td>${producto.modelo}</td>
                 <td>${producto.precio}</td>
-                <td>
-                    <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
-                </td>
+                <td class="borrar">
+                <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"</a>
+                </td>   
             `;
             listaProductos.appendChild(row);
         });
@@ -139,10 +135,8 @@ class Carrito {
         productosLS.forEach(function (producto){
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>
-                    <img src="${producto.imagen}" width=100>
-                </td>
-                <td>${producto.titulo}</td>
+                <td>${producto.marca}</td>
+                <td>${producto.modelo}</td>
                 <td>${producto.precio}</td>
                 <td>
                     <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
@@ -150,7 +144,7 @@ class Carrito {
                 <td id='subtotales'>${producto.precio * producto.cantidad}</td>
                 <td>
                     <a href="#" class="borrar-producto fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a>
-                </td>
+                </td>  
             `;
             listaCompra.appendChild(row);
         });
@@ -206,12 +200,12 @@ class Carrito {
             
         }
         
-        iva = parseFloat(total * 0.19).toFixed(2);
-        subtotal = parseFloat(total-iva).toFixed(2);
+        iva = parseFloat(total * 0.19).toFixed(0);
+        subtotal = parseFloat(total-iva).toFixed(0);
 
-        document.getElementById('subtotal').innerHTML = "S/. " + subtotal;
-        document.getElementById('iva').innerHTML = "S/. " + iva;
-        document.getElementById('total').value = "S/. " + total.toFixed(2);
+        document.getElementById('subtotal').innerHTML = "$ " + subtotal;
+        document.getElementById('iva').innerHTML = "$ " + iva;
+        document.getElementById('total').value = "$ " + total.toFixed(2);
     }
 
     obtenerEvento(e) {
