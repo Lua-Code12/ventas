@@ -32,6 +32,10 @@ loginForm.addEventListener("submit", (e) => {
             })
             .then(function (data) {
                 console.log(data)
+
+
+
+                window.location = "index.html";
             })
         })
 

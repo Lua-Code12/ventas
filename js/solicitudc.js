@@ -27,7 +27,7 @@ formulario.addEventListener("submit", (e) => {
 
         console.log(newFormulario)
 
-        fetch('https://cors-anywhere.herokuapp.com/https://98pzhju8uf.execute-api.us-east-1.amazonaws.com/v1/registrosclientes', {
+        fetch('https://cors-anywhere.herokuapp.com/https://98pzhju8uf.execute-api.us-east-1.amazonaws.com/v1/cambiarclaveclientes', {
             method: 'POST' ,
             headers: {
                 'Accept': 'aplication/json',
@@ -54,5 +54,3 @@ formulario.addEventListener("submit", (e) => {
                
 
         })
-
-        

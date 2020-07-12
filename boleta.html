@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas Online</title>
+
+
+    <!--Bootstrap-->
+
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+
+    <!--font -->
+    <script src="https://kit.fontawesome.com/92107c6743.js" crossorigin="anonymous"></script>
+    
+    <!--Slick slider-->
+    
+
+
+    <!--Stylesheet-->
+
+    
+</head>
+
+<body>
+
+    <header>
+    
+        <h1>Boleta Ventas Online</h1>
+        <h6>Fecha: 13/07/2020</h6> <h6>Sucursal Viña Del Mar, Álvarez #2336</h6>
+        <table class="container my-5 table table-bordered order-table" id="boleta">
+            <thead>
+                <th scope="col">ID boleta</th>
+                <th scope="col" id="nBoleta"></th>
+                <th scope="col">Dirección despacho</th>
+                <th scope="col" id="despacho"></th>
+              <tr>
+                <th scope="col" id="codigo">código producto</th>
+                <th scope="col" id="nombreProducto">Nombre producto</th>
+                <th scope="col" id="descripcion">Descripción</th>
+                <th scope="col" id="precio">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tr>
+                <th colspan="4" scope="col">SUB TOTAL $</th>
+                <th scope="col">
+                    <p id="subtotal"></p>
+                </th>
+                <!-- <th scope="col"></th> -->
+            </tr>
+            <tr>
+                <th colspan="4" scope="col">iva $</th>
+                <th scope="col">
+                    <p id="iva"></p>
+                </th>
+                <!-- <th scope="col"></th> -->
+            </tr>
+            <tr>
+                <th colspan="4" scope="col">TOTAL $</th>
+                <th scope="col">
+                    <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                </th>
+                <!-- <th scope="col"></th> -->
+            </tr>
+
+          </table>
+
+          <div class="col-xs-12 col-md-4">
+            <button type="submit" class="btn btn-success btn-block" id="procesar-boleta">finalizar</button>
+        </div>
+    
+
+    </header>
+
+    <main>
+
+
+
+
+    </main>
+
+    <footer></footer>
+
+
+</body>
+
+</html>
+

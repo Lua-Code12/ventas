@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta</title>
+    <title>Login</title>
 
 
     <!--Bootstrap-->
@@ -32,8 +32,8 @@
 
 <!--header-->
     <header>
-        
-         <div class="container">
+
+ <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12 col-12 col-20">
                     <div class="btn-group"> <button class="btn border dropdown-toggle my-md-4 my-2 text-white" 
@@ -135,6 +135,7 @@
 
         </div>
 
+
     </header>
 
 <!--/header-->
@@ -144,18 +145,13 @@
 <!--main-->
 
     <main>
-        <div class="container my-5">
-            <form id="formulario">
+
+           <div class="container my-5">
+            <form id="confirmacion">
                 <h3>
-                     Cree aquí su cuenta.
+                     Ingrese los digitos enviados a su mail.
                 </h3>
-                <input type="text" id="username" placeholder="Nombre" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
-                <input type="text" id="family_name" placeholder="Apellido" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
-                <input type="text" id="nombreUsuario" placeholder="Nombre Usuario" onkeypress="return validarCaracteres(event)" onblur="limpiar()" id="miInput" required>
-                <input type="text" id="direccion" placeholder="Dirección domicilio " required>
-                <input type="email" id="mail" placeholder="Correo electrónico" required>
-                <input type="password" id="pass" placeholder="Cree una contraseña usando mayusculas, minusculas, números" required>
-                <input type="text" id="comuna" placeholder="Ingrese comuna" required></input>
+                <input type="cc-number" maxlength="6" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" placeholder="introduzca codigo de verificación" required><i>*código enviado a su mail</i> 
 
                 <input type="submit" value="ENVIAR" id="boton"></input>
                         
@@ -165,9 +161,8 @@
         </div>
         
 
-
-        
-        <div class="container-fluid p-0">
+                 
+          <div class="container-fluid p-0">
             <div class="site-info">
                 <div class="row text center py-3 bg-primary-color m-0">
                     <div class="col-md-4 col-sm-12 my-md-0 my-4">
@@ -288,6 +283,16 @@
 
 
     </footer>
+
+
+    </main>
+<!--/main-->
+
+
+
+<!--footer-->
+
+    
     
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -295,7 +300,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/form.js"></script>
-    <script src="./js/formulario.js"></script>
+    
 </body>
 </html>
