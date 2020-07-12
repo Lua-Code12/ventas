@@ -1,22 +1,22 @@
-var formulario = document.getElementById('recuperacion')
+var formulario = document.getElementById('verificar')
 
 formulario.addEventListener("submit", (e) => {
         e.preventDefault();
 
         var username = document.getElementById('nombreUsuario').value
-        var code = document.getElementById('codigo').value      
-        var password = document.getElementById('pass').value
+        var code = document.getElementById('code').value
 
+       
 
         let newFormulario = {
             username: username,
-            code: code,
-            password: password
-        }
+            code: code
+                        
 
+        }
         console.log(newFormulario)
 
-        fetch('https://cors-anywhere.herokuapp.com/https://98pzhju8uf.execute-api.us-east-1.amazonaws.com/v1/confirmarclaveclientes', {
+        fetch('https://cors-anywhere.herokuapp.com/https://98pzhju8uf.execute-api.us-east-1.amazonaws.com/v1/cambiarclaveclientes', {
             method: 'POST' ,
             headers: {
                 'Accept': 'aplication/json',
@@ -36,7 +36,7 @@ formulario.addEventListener("submit", (e) => {
             .then(function (data) {
                 console.log(data)
                 
-            //window.location = "login.html";
+            window.location = "login.html";
 
             })
         

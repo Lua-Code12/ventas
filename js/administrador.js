@@ -13,7 +13,7 @@ loginForm.addEventListener("submit", (e) => {
         }
         console.log(newLogin)
 
-        fetch('https://cors-anywhere.herokuapp.com/https://98pzhju8uf.execute-api.us-east-1.amazonaws.com/v1/loginclientes', {
+        fetch('https://cors-anywhere.herokuapp.com/https://aqw2zt7em4.execute-api.us-east-1.amazonaws.com/v1/loginventas', {
             method: 'POST' ,
             headers: {
                 'Accept': 'aplication/json',
@@ -38,10 +38,4 @@ loginForm.addEventListener("submit", (e) => {
                 //window.location = "index.html";
             })
         })
-
-
-
-
-
-
 

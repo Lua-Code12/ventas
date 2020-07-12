@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta</title>
+    <title>Login</title>
 
 
     <!--Bootstrap-->
@@ -23,7 +23,7 @@
     <!--Stylesheet-->
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/formulario.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
    
@@ -32,8 +32,8 @@
 
 <!--header-->
     <header>
-        
-         <div class="container">
+
+ <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12 col-12 col-20">
                     <div class="btn-group"> <button class="btn border dropdown-toggle my-md-4 my-2 text-white" 
@@ -135,6 +135,7 @@
 
         </div>
 
+
     </header>
 
 <!--/header-->
@@ -144,26 +145,44 @@
 <!--main-->
 
     <main>
-        <div class="container my-5">
-            <form id="formulario">
-                <h3>
-                     Ingresa su nombre de usuario para recuperar cuenta.
-                </h3>
-               
-                <input type="text" id="nombreUsuario" placeholder="Nombre Usuario" required>
-                
 
-                <input type="submit" value="ENVIAR" id="boton"></input>
-                        
+        <div class="login-box" id="loginForm">
+            <img src="./imagenes/Login/perfil-avatar-hombre-icono-redondo_24640-14044.png" class="avatar" alt="Avatar Image">
+            <h1>Inicio de sesión Administrador</h1>
+            <form>
+              <!-- Nomnre usuario -->
+
+              <label for="username">Usuario</label>
+              <input type="text" id="username" placeholder="Digite nombre usuario Administrador">
+              
+              <!-- contraseña -->
+
+              <label for="password">Contraseña</label>
+              <input type="password" id="password" placeholder="Digite su contraseña">
+              
+              <!--Boton de ingreso-->
+
+              <input type="submit" value="Log In">
+              
+              <a href="./solicitudc.html">¿Olvidó su contraseña?</a><br>
+              <a href="./formulario.html">Crear Cuenta</a>
             </form>
-    
-
-        </div>
-        
+          </div>
 
 
-        
-        <div class="container-fluid p-0">
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+
+
+          
+          <div class="container-fluid p-0">
             <div class="site-info">
                 <div class="row text center py-3 bg-primary-color m-0">
                     <div class="col-md-4 col-sm-12 my-md-0 my-4">
@@ -284,6 +303,16 @@
 
 
     </footer>
+
+
+    </main>
+<!--/main-->
+
+
+
+<!--footer-->
+
+    
     
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -291,6 +320,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/solicitud.js"></script>
+    <script src="./js/administrador.js"></script>
+    
 </body>
 </html>
