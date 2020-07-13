@@ -48,50 +48,28 @@ function procesarCompra() {
         })
     }
     else {
-        
-        //aqui se coloca el user id generado en el emailJS
-        (function () {
-            emailjs.init("user_CEozz2F39lJJOLF5mJiDA");
-        })();
 
-        var myform = $("form#procesar-pago");
+        const cargandoGif = document.querySelector('#cargando');
+        cargandoGif.style.display = 'block';
 
-        myform.submit( (event) => {
-            event.preventDefault();
+        const enviado = document.createElement('img');
+        enviado.src = 'img/mail.gif';
+        enviado.style.display = 'block';
+        enviado.width = '150';
 
-            // Change to your service ID, or keep using the default service
-            var service_id = "default_service";
-            var template_id = "template_3SA9LsqQ";
+        setTimeout(() => {
+                cargandoGif.style.display = 'none';
+                document.querySelector('#loaders').appendChild(enviado);
 
-            const cargandoGif = document.querySelector('#cargando');
-            cargandoGif.style.display = 'block';
-
-            const enviado = document.createElement('img');
-            enviado.src = 'img/mail.gif';
-            enviado.style.display = 'block';
-            enviado.width = '150';
-
-            emailjs.sendForm(service_id, template_id, myform[0])
-                .then(() => {
-                    cargandoGif.style.display = 'none';
-                    document.querySelector('#loaders').appendChild(enviado);
-
-                    setTimeout(() => {
-                        compra.vaciarLocalStorage();
-                        enviado.remove();
-                        window.location = "index.html";
-                    }, 2000);
+                setTimeout(() => {
+                    compra.vaciarLocalStorage();
+                    enviado.remove();
+                    //window.location = "index.html";
+                }, 2000)
 
 
-                }, (err) => {
-                    alert("Error al enviar el email\r\n Response:\n " + JSON.stringify(err));
-                    // myform.find("button").text("Send");
-                });
+            })
 
-            return false;
-
-        });
-
-    }
+}
 }
 

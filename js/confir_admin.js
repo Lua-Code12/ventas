@@ -1,22 +1,26 @@
-var formulario = document.getElementById('verificar')
+var formulario = document.getElementById('formulario')
 
 formulario.addEventListener("submit", (e) => {
         e.preventDefault();
 
         var username = document.getElementById('nombreUsuario').value
+        var password = document.getElementById('pass').value
         var code = document.getElementById('code').value
-
+        
        
 
         let newFormulario = {
             username: username,
+            password: password,
             code: code
+            
                         
 
         }
+
         console.log(newFormulario)
 
-        fetch('https://cors-anywhere.herokuapp.com/https://98pzhju8uf.execute-api.us-east-1.amazonaws.com/v1/confirmarclientes', {
+        fetch('https://cors-anywhere.herokuapp.com/https://aqw2zt7em4.execute-api.us-east-1.amazonaws.com/v1/confirmarclaveventas', {
             method: 'POST' ,
             headers: {
                 'Accept': 'aplication/json',
