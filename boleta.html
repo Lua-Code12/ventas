@@ -30,61 +30,38 @@
 
     <header>
     
-        <h1>Boleta Ventas Online</h1>
-        <h6>Fecha: 13/07/2020</h6> <h6>Sucursal Viña Del Mar, Álvarez #2336</h6>
-        <table class="container my-5 table table-bordered order-table" id="boleta">
-            <thead>
-                <th scope="col">ID boleta</th>
-                <th scope="col" id="nBoleta"></th>
-                <th scope="col">Dirección despacho</th>
-                <th scope="col" id="despacho"></th>
-                <th scope="col">Nombre Cliente</th>
-                <th scope="col" id="despacho"></th>
-              <tr>
-                <th scope="col" id="codigo">código producto</th>
-                <th scope="col" id="nombreProducto">Nombre producto</th>
-                <th scope="col" id="descripcion">Descripción</th>
-                <th scope="col" id="precio">Precio</th>
-                <th scope="col" id="cantidad">Cantidad</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-            <tr>
-                <th colspan="4" scope="col">SUB TOTAL $</th>
-                <th scope="col">
-                    <p id="subtotal"></p>
-                </th>
-                <!-- <th scope="col"></th> -->
-            </tr>
-            <tr>
-                <th colspan="4" scope="col">iva $</th>
-                <th scope="col">
-                    <p id="iva"></p>
-                </th>
-                <!-- <th scope="col"></th> -->
-            </tr>
-            <tr>
-                <th colspan="4" scope="col">TOTAL $</th>
-                <th scope="col">
-                    <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
-                </th>
-                <!-- <th scope="col"></th> -->
-            </tr>
-
-          </table>
-
-          <div class="col-xs-12 col-md-4">
-            <button type="submit" class="btn btn-success btn-block" id="procesar-boleta">finalizar</button>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">BOLETA VENTAS ONLINE</h1>
+                <h6>Álvarez 2336, viña del Mar, V región, Chile</h6>
+            <p class="lead">Los mejores productos para el desarrollo tecnológico</p>
         </div>
-    
 
+        <div class="container" id="lista-productos">
+            
+            <div class="table-responsive" id="lista-productos">
+                <table class="table table-bordered order-table" id="contenido" width="100%" cellspacing="0">
+                    <thead style="background-color: #d6dde5;">
+                        <tr>
+                            <th>Fecha</th>                            
+                            <th>ID Boleta</th>                            
+                            <th>Monto</th>
+                            <th>User ID</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+                
+        </div>
+
+        <br><br><br>
+        <br><br><br>
+
+          
     </header>
 
     <main>
@@ -95,7 +72,7 @@
     </main>
 
     <footer></footer>
-
+    <script src="./js/boleta.js"></script>
 
 </body>
 
