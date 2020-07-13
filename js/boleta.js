@@ -7,7 +7,7 @@ function cargarTabla(){
     .then(respuesta => respuesta.json()) //Indicar el formato en que se desea obtener la info
     .then(ordenes => {
         ordenes.forEach(orden => {
-            if (orden.userid == "Camila") {
+            if (orden.userid == "Florencia Huerta") {
             const row = document.createElement('tr');
             row.innerHTML +=  `
             <th>${orden.fecinic}</th>

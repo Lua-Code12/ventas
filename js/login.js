@@ -35,7 +35,7 @@ loginForm.addEventListener("submit", (e) => {
 
 
 
-                //window.location = "index.html";
+                window.location = "catalogo.html";
             })
         })
 

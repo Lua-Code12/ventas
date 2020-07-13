@@ -64,7 +64,7 @@ function procesarCompra() {
                 setTimeout(() => {
                     compra.vaciarLocalStorage();
                     enviado.remove();
-                    //window.location = "index.html";
+                    window.location = "boleta.html";
                 }, 2000)
 
 

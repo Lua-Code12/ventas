@@ -23,7 +23,7 @@
     <!--Stylesheet-->
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/loginadmin.css">
+    <link rel="stylesheet" href="./css/formulario.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
    
@@ -53,6 +53,7 @@
                 </div>
                 <div class="col-md-4 col-12 text-right">
                     <p class="my-md-4 header-links">
+                        <a href="./administrador.html" class="px-2">Administrador</a>
                         <a href="./login.html" class="px-2">Ingresar</a>
                         <a href="./formulario.html" class="px-1">Crear Cuenta</a> 
                     </p>
@@ -147,12 +148,18 @@
         <div class="container my-5">
             <form id="formulario">
                 <h3>
-                     Ingresa su nombre de usuario para recuperar cuenta.
+                     Datos para despacho.
                 </h3>
-               
-                <input type="text" id="nombreUsuario" placeholder="Nombre Usuario" required>
+                <input type="number" id="id_boleta" placeholder="N° Boleta" required>
+                <input type="number" id="total" placeholder="Total" required>
+                <input type="date" id="fecha" placeholder="fecha venta" required>
+                <input type="text" id="direccion" placeholder="Dirección domicilio " required>
+                <input type="text" id="nombre" placeholder="Nombre Usuario"  required>
+                <input type="text" id="apellido" placeholder="Apellido" required>                
+                <input type="text" id="productosDespacho" placeholder="Descripción producto" required>
+                <input type="number" id="codigo" placeholder="código" required>
+                <input type="number" id="cantidad" placeholder="cantidad" required>
                 
-
                 <input type="submit" value="ENVIAR" id="boton"></input>
                         
             </form>
@@ -291,6 +298,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/solici_admin.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/despacho.js"></script>
 </body>
 </html>

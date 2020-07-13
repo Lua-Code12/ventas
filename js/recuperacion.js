@@ -36,7 +36,7 @@ formulario.addEventListener("submit", (e) => {
             .then(function (data) {
                 console.log(data)
                 
-            //window.location = "login.html";
+            window.location = "confirmacionra.html";
 
             })
         

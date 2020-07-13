@@ -34,7 +34,7 @@ formulario.addEventListener("submit", (e) => {
             .then(function (data) {
                 console.log(data)
                 
-            //window.location = "recuperacion.html";
+            window.location = "confir_admin.html";
 
             })
         
